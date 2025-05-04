@@ -1,0 +1,112 @@
+
+.gallery-section{
+    padding-top: 100px;
+}
+
+/* Izolacja galerii */
+.gallery-container .gal-container {
+    padding: 20px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.gallery-container .gal-item .box {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-container .gal-item .box:hover {
+    transform: scale(1.05);
+}
+
+.gallery-container .gal-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.gallery-container .modal-body img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery-container .description {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Footer */
+.footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: auto; /* Przyklejenie footera na sam dół strony */
+}
+
+.footer h4 {
+    font-size: 1.8rem; /* Większy nagłówek w footerze */
+    margin-bottom: 10px;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 1.2rem;
+}
+
+.footer .social-icons {
+    margin: 20px 0;
+}
+
+.footer .social-icon {
+    margin: 0 10px;
+    font-size: 24px; /* Większe ikony social media */
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer .social-icon:hover {
+    color: #007bff;
+}
+
+/* Dodatkowe style dla galerii */
+.gallery-container {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.gallery-container .gal-item .box img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-container .gal-item .box:hover img {
+    transform: scale(1.1);
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .navbar-nav .nav-item {
+        margin: 0;
+        text-align: center;
+    }
+
+    .gallery-container .gal-item .box {
+        border-radius: 6px;
+    }
+
+    .footer h4 {
+        font-size: 1.5rem;
+    }
+
+    .footer p {
+        font-size: 1rem;
+    }
+
+    .footer .social-icon {
+        font-size: 20px;
+    }
+}

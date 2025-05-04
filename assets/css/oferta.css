@@ -1,0 +1,162 @@
+/* Rozciąganie układu na cały ekran */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Minimalna wysokość widoku */
+    margin: 0;
+}
+
+/* Główna sekcja strony */
+main {
+    flex-grow: 1; /* Rozciąganie sekcji głównej na dostępne miejsce */
+}
+
+/* Ogólny styl dla sekcji Oferty */
+.oferta {
+    padding: 120px 0 40px; /* Dodano padding od góry, aby uniknąć kolizji z navbar */
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Nagłówek i lead */
+.oferta h1 {
+    font-size: 3rem; /* Większy nagłówek */
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.oferta .lead {
+    font-size: 1.5rem; /* Większy opis sekcji */
+    color: #666;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Siatka dla card boxów */
+.articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Dynamiczna siatka, większe boxy */
+    gap: 30px; /* Odstępy między boxami */
+    width: 100%;
+    max-width: 1400px; /* Ograniczenie maksymalnej szerokości */
+    margin: 0 auto; /* Wyśrodkowanie na stronie */
+    flex-grow: 1; /* Rozciąganie sekcji na resztę dostępnej wysokości */
+}
+
+/* Card Box */
+article {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Obrazy */
+figure {
+    margin: 0;
+    height: 60%; /* Większe proporcje dla obrazków */
+    overflow: hidden;
+}
+
+figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+article:hover figure img {
+    transform: scale(1.1);
+}
+
+/* Treść w card boxach */
+.article-body {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Wyrównanie treści w boxach */
+    gap: 10px; /* Odstępy między elementami w body */
+    height: 100%; /* Rozciąganie na całą wysokość */
+}
+
+.article-body h2 {
+    font-size: 2rem; /* Większy tytuł */
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.article-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem; /* Większy tekst w listach */
+    color: #555;
+}
+
+.article-body ul li {
+    margin-bottom: 5px;
+}
+
+.article-body p {
+    font-size: 1.2rem; /* Większy opis w boxach */
+    color: #555;
+}
+
+/* Footer */
+.footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 0; /* Usuń auto */
+}
+
+.footer h4 {
+    font-size: 1.8rem; /* Większy nagłówek w footerze */
+    margin-bottom: 10px;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 1.2rem;
+}
+
+.footer .social-icons {
+    margin: 20px 0;
+}
+
+.footer .social-icon {
+    margin: 0 10px;
+    font-size: 24px; /* Większe ikony social media */
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer .social-icon:hover {
+    color: #007bff;
+}
+
+/* Responsywność */
+@media (max-width: 576px) {
+    .articles {
+        grid-template-columns: 1fr; /* Jedna kolumna na małych ekranach */
+        gap: 20px;
+    }
+
+    .oferta h1 {
+        font-size: 2.5rem; /* Mniejszy nagłówek na mobilnych */
+    }
+
+    .article-body h2 {
+        font-size: 1.5rem; /* Mniejszy rozmiar tytułów w boxach */
+    }
+}

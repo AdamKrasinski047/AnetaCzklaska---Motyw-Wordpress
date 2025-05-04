@@ -1,0 +1,163 @@
+/* Tło ze zdjęciem */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Zachowuje proporcje zdjęcia */
+    z-index: -1; /* Przesuwa tło za treść strony */
+}
+
+/* Wrapper dla zawartości strony */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Zapewnia pełną wysokość strony */
+}
+
+/* Sekcja Kontakt */
+.contact-section {
+    position: relative;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px 40px; /* Góra i dół */
+    background: transparent; /* Usunięcie tła */
+    flex: 1; /* Zapełnia dostępną przestrzeń */
+}
+
+/* Kontener kontaktowy */
+.contact-container {
+    background-color: rgba(255, 255, 255, 0.85); /* Lekko widoczny biały */
+    padding: 30px;
+    border-radius: 20px; /* Zaokrąglone rogi */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Subtelny cień */
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Styl tekstu */
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.lead {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.contact-item {
+    margin-bottom: 20px;
+}
+
+.contact-icon {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.contact-text {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-detail {
+    font-size: 1.2rem;
+}
+
+.contact-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+/* Ikony społecznościowe */
+.contact-social {
+    margin-top: 20px;
+}
+
+.social-text {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    font-size: 2rem;
+    color: #333;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+    color: #007bff;
+    transform: scale(1.2);
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .contact-section {
+        min-height: 100vh; /* Minimum wysokości */
+        height: auto; /* Dopasowanie do treści */
+        padding: 20px; /* Marginesy */
+    }
+
+    .contact-container {
+        padding: 20px; /* Zmniejszone marginesy wewnętrzne */
+    }
+}
+
+/* Poprawa stylu logo w navbarze */
+.navbar-brand img.logo {
+    height: 50px;
+    max-width: 100%; /* Zapobiega nadmiernemu skalowaniu */
+    object-fit: contain;
+}
+
+/* Footer */
+.footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: auto; /* Automatyczny margines dla przyklejenia */
+}
+
+.footer h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.footer .social-icons {
+    margin: 20px 0;
+}
+
+.footer .social-icon {
+    margin: 0 10px;
+    font-size: 20px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer .social-icon:hover {
+    color: #007bff;
+}

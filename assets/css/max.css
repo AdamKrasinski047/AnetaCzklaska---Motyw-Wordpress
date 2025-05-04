@@ -1,0 +1,14 @@
+section.hero{
+    margin-top: 78px;
+}
+
+.slideshow-container{
+    height: inherit;
+}
+
+
+@media screen and (min-width: 992px) {
+    #navbarNav{
+        justify-content: flex-end;
+    }
+}

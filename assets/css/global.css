@@ -1,0 +1,130 @@
+/* Global Reset */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: visible; /* Zapewnia poprawne działanie sticky */
+}
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    padding-top: 70px; /* Przestrzeń dla sticky navbaru */
+    background-color: #f8f9fa; /* Domyślny jasny kolor tła */
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin: 0 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Sticky Navbar */
+.navbar-sticky {
+    position: fixed !important; /* Wymuszenie sticky jako fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Zapewnia priorytet nad innymi elementami */
+    background-color: rgba(255, 255, 255, 0.95); /* Lekko przezroczyste tło */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Wyraźny cień pod navbar */
+    transition: all 0.3s ease; /* Płynne przejścia */
+}
+
+.navbar-brand img.logo {
+    height: 50px;
+    object-fit: contain;
+}
+
+.navbar-nav .nav-link {
+    color: #333;
+    padding: 10px 15px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff; /* Kolor po najechaniu */
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 0;
+    }
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-light {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.btn-light:hover {
+    background-color: #f8f9fa;
+    color: #007bff;
+}
+
+.btn-outline-light {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.btn-outline-light:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Footer Styles (opcjonalne) */
+footer {
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+/* Utilities */
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.navbar-nav {
+    list-style: none !important; /* Usuwa kropki */
+    margin: 0 !important;
+    padding: 0 !important;
+}
